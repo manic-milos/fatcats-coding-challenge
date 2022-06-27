@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { API } from '../API';
+import { API, JSONRow } from '../API';
 
-export const useLoadData = () => {
-	const [data, setData] = useState<unknown[]>([]);
+export const useLoadData = () : {data:JSONRow[]} => {
+	const [data, setData] = useState<JSONRow[]>([]);
 
 	useEffect(() => {
 		setData(API.loadData());
