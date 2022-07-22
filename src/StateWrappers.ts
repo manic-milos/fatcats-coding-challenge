@@ -3,7 +3,7 @@ export type StateWrapper<T> = {
   setState: (newState: T) => void;
 };
 
-export function createWrapper<T>([state, setter]: [
+export function createWrapperFromState<T>([state, setter]: [
   state: T,
   setter: (newState: T) => void
 ]) {

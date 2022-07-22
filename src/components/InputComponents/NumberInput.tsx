@@ -1,6 +1,6 @@
-import React from 'react';
+import { InputControlProps } from './InputControlProps';
 
-export function NumberInput({ input, setInput }:{input:number, setInput:(arg:number)=>void}) {
+export function NumberInput({ input, setInput }:InputControlProps<number>) {
 	return (
 		<div>
 			<input type="number" value={input} onChange={e => setInput(e.currentTarget.valueAsNumber)} />

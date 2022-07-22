@@ -1,9 +1,9 @@
-import React from 'react';
 import { useLoadData } from '../../hooks/useLoadData';
 import { JSONRow } from '../../API';
 import { List } from '../VirtualizedList/List';
+import { RowRenderer } from './RowRenderer';
 
-export function MainTable(): JSX.Element {
+export function MainTable() {
 	const { data }: { data: JSONRow[] } = useLoadData();
 
 	if (data.length > 0) {
@@ -15,6 +15,7 @@ export function MainTable(): JSX.Element {
 				itemCount={1000}
 				itemSize={35}
 				margins={20}
+				rowRenderer={RowRenderer}
 			/>
 		);
 	}

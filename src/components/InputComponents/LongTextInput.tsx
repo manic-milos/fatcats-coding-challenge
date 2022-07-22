@@ -1,6 +1,6 @@
-import React from 'react';
+import { InputControlProps } from './InputControlProps';
 
-export function LongTextInput({ input, setInput }:{input:string, setInput:(arg:string)=>void}) {
+export function LongTextInput({ input, setInput }:InputControlProps<string>) :JSX.Element {
 	return (
 		<div>
 			<textarea onChange={e => setInput(e.currentTarget.value)} value={input} />

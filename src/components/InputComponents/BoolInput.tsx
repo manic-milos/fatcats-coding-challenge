@@ -1,6 +1,6 @@
-import React from 'react';
+import { InputControlProps } from './InputControlProps';
 
-export function BoolInput({ input, setInput }:{input:boolean, setInput:(arg:boolean)=>void}) {
+export function BoolInput({ input, setInput }: InputControlProps<boolean>) {
 	return (
 		<div>
 			<span>true</span>
